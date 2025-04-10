@@ -5,9 +5,9 @@ return {
     "nvim-lua/plenary.nvim",
     "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
     "MunifTanjim/nui.nvim",
-    {"3rd/image.nvim", opts = {}}, -- Optional image support in preview window: See `# Preview Mode` for more information
+    { "3rd/image.nvim", opts = {} }, -- Optional image support in preview window: See `# Preview Mode` for more information
   },
-  lazy = false, -- neo-tree will lazily load itself
+  lazy = false,                    -- neo-tree will lazily load itself
   ---@module "neo-tree"
   ---@type neotree.Config?
   opts = {
@@ -16,12 +16,12 @@ return {
       statusline = false,
     },
     filesystem = {
-        filtered_items = {
-          visible = true
+      follow_current_file = {
+        enabled = true,
+        leave_dirs_open = false,
       },
-      window = {
-        ['/'] = false
-      }
+      filtered_items = { visible = true },
+      window = { ['/'] = false }
     },
   },
 }

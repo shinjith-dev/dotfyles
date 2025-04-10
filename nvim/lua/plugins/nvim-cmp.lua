@@ -1,4 +1,3 @@
-
 return {
   {
     "hrsh7th/nvim-cmp",
@@ -43,7 +42,13 @@ return {
           end, { "i", "s" }),
         }),
         sources = cmp.config.sources({
-          { name = "nvim_lsp" },
+          {
+            name = "nvim_lsp",
+            entry_filter = function(entry)
+              -- Filter out snippet completions from LSP
+              return entry:get_kind() ~= require("cmp.types").lsp.CompletionItemKind.Snippet
+            end,
+          },
           { name = 'vsnip' }, -- For vsnip users.
           { name = "buffer" },
           { name = "path" },
@@ -53,7 +58,7 @@ return {
           format = function(entry, vim_item)
             vim_item.menu = ({
               nvim_lsp = "[LSP]",
-              vsnip = "[Snip]",
+              vsnip    = "[Snip]",
               buffer   = "[Buf]",
               path     = "[Path]",
               nvim_lua = "[Lua]",

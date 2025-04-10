@@ -25,6 +25,7 @@ map("n", "<leader>bd", ":bd<CR>", opts)
 map("n", "<leader>ff", "<cmd>Telescope find_files<cr>", opts)
 map("n", "<leader>fg", "<cmd>Telescope live_grep<cr>", opts)
 map("n", "<leader>fb", "<cmd>Telescope buffers<cr>", opts)
+map("n", "<leader>sl", "<cmd>Telescope resume<cr>", opts)
 map("n", "<leader>fh", "<cmd>Telescope help_tags<cr>", opts)
 
 -- Neo-tree
@@ -41,3 +42,24 @@ map("n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", opts)
 map("n", "<leader>dd", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)
 map("n", "[d", "<cmd>lua vim.diagnostic.goto_prev()<CR>", opts)
 map("n", "]d", "<cmd>lua vim.diagnostic.goto_next()<CR>", opts)
+
+-- which key
+local wk = require("which-key")
+wk.add({
+  { "<leader>b",  group = "buffer" },
+  { "<leader>bd", desc = "Delete Buffer" },
+  { "<leader>c",  group = "code" },
+  { "<leader>ca", desc = "Code Action" },
+  { "<leader>d",  group = "diagnostics" },
+  { "<leader>dd", desc = "Open Diagnostic Float" },
+  { "<leader>e",  desc = "Toggle File Explorer" },
+  { "<leader>f",  group = "find" },
+  { "<leader>fb", desc = "Buffers" },
+  { "<leader>ff", desc = "Find Files" },
+  { "<leader>fg", desc = "Live Grep" },
+  { "<leader>fh", desc = "Help Tags" },
+  { "<leader>r",  group = "rename" },
+  { "<leader>rn", desc = "Rename Symbol" },
+  { "<leader>s",  group = "search" },
+  { "<leader>sl", desc = "Resume Last Search" },
+})
