@@ -7,7 +7,7 @@ local opts = { noremap = true, silent = true }
 map("n", "<leader>bn", ":bnext<CR>", opts)
 map("n", "<leader>bv", ":bprevious<CR>", opts)
 map("n", "<leader>bd", ":bd<CR>", opts)
-map("n", "<leader>s", ":w<CR>", opts)
+-- map("n", "<leader>s", ":w<CR>", opts)
 map("n", "<leader>q", ":q<CR>", opts)
 
 -- Windows
@@ -81,7 +81,7 @@ wk.add({
   { "<leader>bb", desc = "Previous Buffer", icon = "" },
   { "<leader>bd", desc = "Delete Buffer", icon = "" },
 
-  { "<leader>s", desc = "Save Buffer", icon = "󰆓" },
+  -- { "<leader>s", desc = "Save Buffer", icon = "󰆓" },
   { "<leader>q", desc = "Close Buffer", icon = "󰩈" },
 
   -- windows
