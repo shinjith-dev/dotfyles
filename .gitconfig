@@ -1,0 +1,8 @@
+[init]
+	defaultBranch = main
+[user]
+	email = shinjithpallikkara@gmail.com
+	name = shinjith-dev
+	signingkey = 650EFFCD9E2CE50A
+[commit]
+	gpgsign = true
