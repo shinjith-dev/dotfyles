@@ -38,3 +38,4 @@ require("lazy").setup({
 })
 
 vim.cmd.colorscheme "catppuccin"
+vim.notify("Hello from nvim-notify!", vim.log.levels.INFO)

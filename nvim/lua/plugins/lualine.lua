@@ -29,6 +29,7 @@ local bubbles_theme = {
   },
 }
 
+
 return {
   'nvim-lualine/lualine.nvim',
   dependencies = { 'nvim-tree/nvim-web-devicons' },
@@ -40,12 +41,12 @@ return {
       globalstatus = true,
     },
     sections = {
-      lualine_a = { { 'mode', separator = { left = '' }, right_padding = 2 } },
+      lualine_a = { { 'mode', separator = { left = '' }, right_padding = 1 } },
       lualine_b = { 'filename', 'branch' },
       lualine_c = { '%=' },
       lualine_x = {},
       lualine_y = { 'filetype', 'progress' },
-      lualine_z = { { 'location', separator = { right = '' }, left_padding = 2 } },
+      lualine_z = { { 'location', separator = { right = '' }, left_padding = 1 } },
     },
     inactive_sections = {
       lualine_a = { 'filename' },
